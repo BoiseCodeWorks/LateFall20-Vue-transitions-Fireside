@@ -1,0 +1,73 @@
+// Transitions
+
+// [+] ROUTER TRANSITION
+//   intentially empty by default
+//   if you want to enable router
+//   transtions change the settings below
+.custom-enter-active{
+  animation: bounce-in 1s linear;
+
+}
+
+.custom-leave-active{
+ animation: bounce-in 1s linear reverse;
+}
+
+.custom-enter-from{
+transform: translate(10vw,0);
+opacity: 0;
+}
+.custom-leave-to{
+transform: translate(-10vw, -100vh);
+opacity: 0;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.route-enter-active,
+.route-leave-active {
+  transition: all 1s linear; // try changing 0s to .25s
+}
+.route-enter-from,
+.route-leave-to {
+  opacity: 0; // try setting to 0
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 1s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+.slideY-enter-active,
+.slideY-leave-active {
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+.slideY-enter-from,
+.slideY-leave-to {
+  transform: translateY(10vh);
+  opacity: 0;
+}
+.slideX-enter-active,
+.slideX-leave-active {
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}
+.slideX-enter-from,
+.slideX-leave-to {
+  transform: translateX(100vw);
+}
